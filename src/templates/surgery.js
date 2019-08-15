@@ -5,13 +5,16 @@ import LeafletMap from '../components/leafletmap'
 
 const SurgeryTemplate = ({ data }) => {
   let surgery = data.allEpraccurCsv.edges[0].node;
-  let position = [surgery.fields.geocoderGeometry.lat, surgery.fields.geocoderGeometry.lng];
-  let address = [surgery.field5, surgery.field6, surgery.field7, surgery.field8, surgery.field9, surgery.field10].filter(function(el) { return el != "" }).join(", ");
+  let position = null
+  if (surgery.fields !== null) {
+    position = [surgery.fields.geocoderGeometry.lat, surgery.fields.geocoderGeometry.lng];
+  }
+  let address = [surgery.field5, surgery.field6, surgery.field7, surgery.field8, surgery.field9, surgery.field10].filter(function(el) { return el !== "" }).join(", ");
   return (
     <Layout>
     <h2>{surgery.field2}</h2>
     <p>{address}</p>
-    {typeof window !== 'undefined' &&
+    {typeof window !== 'undefined' && position &&
         <LeafletMap
           position={position}
           zoom={12}

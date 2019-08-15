@@ -1,7 +1,7 @@
-Publishing spatial data to the web using Gatsby
+Geocoding addresses in a Gatsby site using the OpenCage Geocoder
 
-Demonstrating how to build a website from an ESRI Shapefile
+Demonstrating how to geocode addresses in a Gatsby site using the OpenCage Geocoder
 
-For more information see https://www.andrewl.net/article/gatsby-spatial-data
+For more information see https://www.andrewl.net/article/gatsby-geocoding
 
-Demo at https://andrewl.github.io/gatsby-spatial-data
+Demo at https://andrewl.github.io/gatsby-geocoding

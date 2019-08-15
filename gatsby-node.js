@@ -16,15 +16,6 @@ exports.createPages = ({ actions, graphql }) => {
     edges {
       node {
         field1
-        field2
-        field5
-        field6
-        field7
-        field8
-        field9
-        field10
-        field13
-
       }
     }
   }

@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `gatsby-geocoder`,
+  pathPrefix: `gatsby-geocoding`,
   siteMetadata: {
     title: `Geocoding data with Gatsby`,
     description: `Demonstrating how to geocode data within Gatsby to display it on a map`,
