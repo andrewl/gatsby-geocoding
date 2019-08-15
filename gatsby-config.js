@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-opencage-geocoder`,
       options: {
-        api_key: `cda2b328530b474bb9de470d427f10f8`,
+        api_key: `YOUR-API-KEY-HERE`,
         nodeTypes: [
           {
             nodeType: `EpraccurCsv`,

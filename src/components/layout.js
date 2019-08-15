@@ -31,16 +31,22 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-        <main>{children}</main>
+          <main>{children}</main>
         </div>
-          <footer style={{
+        <footer
+          style={{
             padding: `0.5px 1rem`,
             color: `#5b6c5d`,
-            }}>
-            © {new Date().getFullYear()} <a href="https://www.andrewl.net">Andrew Larcombe</a>, built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a> using Open Data from <a href="https://digital.nhs.uk/services/organisation-data-service/data-downloads/gp-and-gp-practice-related-data">NHS Digital</a>
-          </footer>
+          }}
+        >
+          © {new Date().getFullYear()}{" "}
+          <a href="https://www.andrewl.net">Andrew Larcombe</a>, built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a> using Open Data from{" "}
+          <a href="https://digital.nhs.uk/services/organisation-data-service/data-downloads/gp-and-gp-practice-related-data">
+            NHS Digital
+          </a>
+        </footer>
       </>
     )}
   />

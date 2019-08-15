@@ -11,34 +11,32 @@ exports.createPages = ({ actions, graphql }) => {
     resolve(
       graphql(
         `
-        query MyQuery {
-  allEpraccurCsv {
-    edges {
-      node {
-        field1
-      }
-    }
-  }
-}
-`
+          query MyQuery {
+            allEpraccurCsv {
+              edges {
+                node {
+                  field1
+                }
+              }
+            }
+          }
+        `
       ).then(result => {
         if (result.errors) {
           reject(result.errors)
         }
 
-
         // Create pages for each article.
-        result.data.allEpraccurCsv.edges.forEach(({node}) => {
+        result.data.allEpraccurCsv.edges.forEach(({ node }) => {
           createPage({
             path: "/surgery/" + node.field1,
             component: surgeryTemplate,
             context: {
-              id: node.field1
+              id: node.field1,
             },
           })
         })
       })
-    );
-
-  }
-  )}
+    )
+  })
+}
